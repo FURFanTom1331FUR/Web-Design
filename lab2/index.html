@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вместе — регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="lab-nav">
+        <a href="../lab1/index.html">Лаба 1</a>
+        <a href="index.html" class="active">Лаба 2</a>
+        <a href="../index.html">Все лабы</a>
+    </nav>
+
+    <header class="header">
+        <div class="header-inner">
+            <img src="logo.png" alt="Логотип Вместе" class="logo">
+            <h1 class="brand">ВМЕСТЕ</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="card">
+            <form class="form form-login" action="OK.html" method="get">
+                <input type="text" name="login" placeholder="Телефон или email" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <div class="form-row">
+                    <button type="submit" class="btn">Войти</button>
+                    <a href="OK.html" class="link">Забыли пароль?</a>
+                </div>
+            </form>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2 class="title">Регистрация</h2>
+            <p class="subtitle">Моментальная регистрация</p>
+            <form class="form form-register" action="OK.html" method="get">
+                <input type="text" name="first_name" placeholder="Ваше имя" required>
+                <input type="text" name="last_name" placeholder="Ваша фамилия" required>
+                <div class="birth">
+                    <label class="birth-label">
+                        Дата рождения
+                        <span class="hint" title="Укажите дату рождения">?</span>
+                    </label>
+                    <div class="birth-selects">
+                        <select name="day" required>
+                            <option value="">День</option>
+                            <option>1</option><option>2</option><option>3</option><option>4</option>
+                            <option>5</option><option>6</option><option>7</option><option>8</option>
+                            <option>9</option><option>10</option><option>11</option><option>12</option>
+                            <option>13</option><option>14</option><option>15</option><option>16</option>
+                            <option>17</option><option>18</option><option>19</option><option>20</option>
+                            <option>21</option><option>22</option><option>23</option><option>24</option>
+                            <option>25</option><option>26</option><option>27</option><option>28</option>
+                            <option>29</option><option>30</option><option>31</option>
+                        </select>
+                        <select name="month" required>
+                            <option value="">Месяц</option>
+                            <option value="1">Январь</option>
+                            <option value="2">Февраль</option>
+                            <option value="3">Март</option>
+                            <option value="4">Апрель</option>
+                            <option value="5">Май</option>
+                            <option value="6">Июнь</option>
+                            <option value="7">Июль</option>
+                            <option value="8">Август</option>
+                            <option value="9">Сентябрь</option>
+                            <option value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option>
+                            <option value="12">Декабрь</option>
+                        </select>
+                        <select name="year" required>
+                            <option value="">Год</option>
+                            <option>2010</option><option>2009</option><option>2008</option><option>2007</option>
+                            <option>2006</option><option>2005</option><option>2004</option><option>2003</option>
+                            <option>2002</option><option>2001</option><option>2000</option><option>1999</option>
+                            <option>1998</option><option>1997</option><option>1996</option><option>1995</option>
+                            <option>1994</option><option>1993</option><option>1992</option><option>1991</option>
+                            <option>1990</option><option>1989</option><option>1988</option><option>1985</option>
+                            <option>1980</option><option>1975</option><option>1970</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-wide">Зарегистрироваться</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

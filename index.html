@@ -3,112 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Лабораторная работа 1</title>
+    <title>Web-дизайн — лабораторные работы</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #1a1a1a;
+            color: #eee;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+        .lab-nav {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            padding: 10px;
+            background: #2d2d2d;
+        }
+        .lab-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .lab-nav a.active,
+        .lab-nav a:hover { background: #7b2cbf; }
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+        h1 { font-size: 28px; margin-bottom: 8px; }
+        .meta { color: #aaa; margin-bottom: 28px; font-size: 14px; }
+        ul { list-style: none; }
+        li {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            background: #242424;
+            border-radius: 8px;
+            border-left: 4px solid #555;
+        }
+        li.done { border-left-color: #7b2cbf; }
+        li a {
+            color: #c77dff;
+            text-decoration: none;
+            flex: 1;
+        }
+        li a:hover { text-decoration: underline; }
+        .badge {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .badge.ready { background: #7b2cbf; color: #fff; }
+        .badge.soon { background: #444; color: #bbb; }
+        .num { color: #888; font-size: 13px; min-width: 28px; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="bloc-img">
-                <img src="src/2026-09-07_22-39-20.png" alt="logo">
-                <h1 class="logo">Легенды русской<br>поэзии</h1>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#esenin" class="nav-link">Есенин</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#pushkin" class="nav-link">Пушкин</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#mayakovsky" class="nav-link">Маяковский</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#lermontov" class="nav-link">Лермонтов</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-
-    <!-- main -->
-    <main class="main">
-        <section class="poet" id="esenin">
-            <h1>Сергей Есенин</h1>
-            <h2>Заметался пожар голубой...</h2>
-            <img src="src/2026-09-07_23-01-01.png" alt="Сергей Есенин">
-            <p>
-                Заметался пожар голубой,<br>
-                Позабылись родимые дали.<br>
-                В первый раз я запел про любовь,<br>
-                В первый раз отрекаюсь скандалить.
-            </p>
-            <a href="https://ru.wikipedia.org/wiki/Есенин,_Сергей_Александрович" target="_blank">
-                Ссылка на страницу википедии
-            </a>
-        </section>
-
-        <section class="poet" id="pushkin">
-            <h1>Александр Пушкин</h1>
-            <h2>У Лукоморья</h2>
-            <img src="src/pushkin.jpg" alt="Александр Пушкин">
-            <p>
-                У лукоморья дуб зелёный<br>
-                Златая цепь на дубе том:<br>
-                И днём и ночью кот учёный<br>
-                Всё ходит по цепи кругом;
-            </p>
-            <a href="https://ru.wikipedia.org/wiki/Пушкин,_Александр_Сергеевич" target="_blank">
-                Ссылка на страницу википедии
-            </a>
-        </section>
-
-        <section class="poet" id="mayakovsky">
-            <h1>Владимир Маяковский</h1>
-            <h2>Стихи о советском паспорте</h2>
-            <img src="src/mayakovsky.jpg" alt="Владимир Маяковский">
-            <p>
-                Я волком бы выгрыз&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;бюрократизм.<br>
-                К мандатам&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;почтения нету.
-            </p>
-            <a href="https://ru.wikipedia.org/wiki/Маяковский,_Владимир_Владимирович" target="_blank">
-                Ссылка на страницу википедии
-            </a>
-        </section>
-
-        <section class="poet" id="lermontov">
-            <h1>Михаил Лермонтов</h1>
-            <h2>Тучки</h2>
-            <img src="src/lermontov.jpg" alt="Михаил Лермонтов">
-            <p>
-                Тучки небесные, вечные странники!<br>
-                Степью лазурною, цепью жемчужною<br>
-                Мчитесь вы, будто как я же, изгнанники<br>
-                С милого севера в сторону южную.
-            </p>
-            <a href="https://ru.wikipedia.org/wiki/Лермонтов,_Михаил_Юрьевич" target="_blank">
-                Ссылка на страницу википедии
-            </a>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="bloc-img">
-                <img src="src/2026-09-07_22-39-20.png" alt="logo">
-                <h2 class="logo">Легенды русской<br>поэзии</h2>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#esenin" class="nav-link">Есенин</a></li>
-                    <li class="nav-item"><a href="#pushkin" class="nav-link">Пушкин</a></li>
-                    <li class="nav-item"><a href="#mayakovsky" class="nav-link">Маяковский</a></li>
-                    <li class="nav-item"><a href="#lermontov" class="nav-link">Лермонтов</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
+    <nav class="lab-nav">
+        <a href="lab1/index.html">Лаба 1</a>
+        <a href="lab2/index.html">Лаба 2</a>
+        <a href="index.html" class="active">Все лабы</a>
+    </nav>
+    <div class="wrap">
+        <h1>Web-дизайн — лабораторные работы</h1>
+        <p class="meta">Курс лабораторных работ · Артём Скопенков · ИС2-241-ОБ</p>
+        <ul>
+            <li class="done">
+                <span class="num">01</span>
+                <a href="lab1/index.html">Основы верстки — «Легенды русской поэзии»</a>
+                <span class="badge ready">готово</span>
+            </li>
+            <li class="done">
+                <span class="num">02</span>
+                <a href="lab2/index.html">Работа с формой обработки информации — «Вместе»</a>
+                <span class="badge ready">готово</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <a href="lab3/index.html">Работа с анимацией</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <a href="lab4/index.html">Создание сайта по техническому заданию</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <a href="lab5/index.html">Вывод группы данных, сортировка данных</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <a href="lab6/index.html">Управление форматами даты и времени</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <a href="lab7/index.html">Сортировка, вывод с условиями. Права доступа</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <a href="lab8/index.html">Вывод группы данных, сортировка данных</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <a href="lab9/index.html">Подключение к базе данных из PHP-файла</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <a href="lab10/index.html">Передача параметров в запрос</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">11</span>
+                <a href="lab11/index.html">Взаимодействие клиентской и серверной частей веб-приложений</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">12</span>
+                <a href="lab12/index.html">JavaScript: основы синтаксиса</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">13</span>
+                <a href="lab13/index.html">Методы Window и обработчики событий</a>
+                <span class="badge soon">скоро</span>
+            </li>
+            <li>
+                <span class="num">14</span>
+                <a href="lab14/index.html">События языка JavaScript</a>
+                <span class="badge soon">скоро</span>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
