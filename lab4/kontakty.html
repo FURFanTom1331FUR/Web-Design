@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Пиксель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="lab-nav">
+        <a href="../lab1/index.html">Лаба 1</a>
+        <a href="../lab2/index.html">Лаба 2</a>
+        <a href="../lab3/index.html">Лаба 3</a>
+        <a href="index.html" class="active">Лаба 4</a>
+        <a href="../index.html">Все лабы</a>
+    </nav>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">Пиксель</a>
+            <nav class="site-nav">
+                <a href="index.html">Главная</a>
+                <a href="uslugi.html">Услуги</a>
+                <a href="kontakty.html" class="current">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap page">
+        <h1>Контакты</h1>
+        <div class="contact-grid">
+            <section class="contact-info">
+                <h2>Студия «Пиксель»</h2>
+                <p><strong>Email:</strong> hello@pixel-studio.example</p>
+                <p><strong>Телефон:</strong> +7 (900) 123-45-67</p>
+                <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 10</p>
+                <p class="muted">Контакты вымышленные — для учебной лабораторной работы.</p>
+            </section>
+            <section class="contact-form-block">
+                <h2>Обратная связь</h2>
+                <form class="form" action="thanks.html" method="get">
+                    <label>Имя
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                    </label>
+                    <label>Email
+                        <input type="email" name="email" placeholder="you@example.com" required>
+                    </label>
+                    <label>Сообщение
+                        <textarea name="message" rows="4" placeholder="Кратко опишите задачу" required></textarea>
+                    </label>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Пиксель · Артём Скопенков</p>
+    </footer>
+</body>
+</html>
