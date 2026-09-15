@@ -14,8 +14,8 @@
 |---|----------|--------|--------|
 | 1 | Основы верстки | **готово** | [lab1/](https://furfantom1331fur.github.io/Web-Design/lab1/) |
 | 2 | Работа с формой обработки информации | **готово** | [lab2/](https://furfantom1331fur.github.io/Web-Design/lab2/) |
-| 3 | Работа с анимацией | скоро | [lab3/](https://furfantom1331fur.github.io/Web-Design/lab3/) |
-| 4 | Создание сайта по техническому заданию | скоро | [lab4/](https://furfantom1331fur.github.io/Web-Design/lab4/) |
+| 3 | Работа с анимацией | **готово** | [lab3/](https://furfantom1331fur.github.io/Web-Design/lab3/) |
+| 4 | Создание сайта по техническому заданию | **готово** | [lab4/](https://furfantom1331fur.github.io/Web-Design/lab4/) |
 | 5 | Вывод группы данных, сортировка данных | скоро | [lab5/](https://furfantom1331fur.github.io/Web-Design/lab5/) |
 | 6 | Управление форматами даты и времени | скоро | [lab6/](https://furfantom1331fur.github.io/Web-Design/lab6/) |
 | 7 | Сортировка, вывод с условиями. Права доступа | скоро | [lab7/](https://furfantom1331fur.github.io/Web-Design/lab7/) |
@@ -37,7 +37,9 @@ Web-Design/
 ├── README.md
 ├── lab1/               # готово — «Легенды русской поэзии»
 ├── lab2/               # готово — «Вместе» (формы)
-├── lab3/ … lab14/      # заглушки (скоро)
+├── lab3/               # готово — CSS-анимации
+├── lab4/               # готово — студия «Пиксель»
+├── lab5/ … lab14/      # заглушки (скоро)
 ```
 
 GitHub Pages публикуется из ветки `main`, корень `/`.
@@ -52,3 +54,11 @@ GitHub Pages публикуется из ветки `main`, корень `/`.
 
 ### Lab 2 — Работа с формой обработки информации
 Сайт «Вместе»: формы входа и регистрации (HTML + CSS).
+
+### Lab 3 — Работа с анимацией
+Демо CSS transitions и @keyframes (круг → квадрат, свойства animation-*).  
+Отчёт: [`lab3/Otchet_Lab3_Web-Dizayn.docx`](lab3/Otchet_Lab3_Web-Dizayn.docx)
+
+### Lab 4 — Создание сайта по техническому заданию
+Сайт студии «Пиксель»: главная, услуги, контакты + форма (HTML + CSS).  
+Отчёт: [`lab4/Otchet_Lab4_Web-Dizayn.docx`](lab4/Otchet_Lab4_Web-Dizayn.docx)
