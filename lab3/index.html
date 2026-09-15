@@ -3,31 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лаба 3 — скоро</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, Helvetica, sans-serif; background: #1a1a1a; color: #eee; min-height: 100vh; }
-        .lab-nav { display: flex; gap: 12px; justify-content: center; padding: 10px; background: #2d2d2d; }
-        .lab-nav a { color: #fff; text-decoration: none; font-size: 14px; padding: 4px 10px; border-radius: 4px; }
-        .lab-nav a.active, .lab-nav a:hover { background: #7b2cbf; }
-        .wrap { max-width: 640px; margin: 80px auto; padding: 0 16px; text-align: center; }
-        h1 { font-size: 24px; margin-bottom: 12px; }
-        p { color: #aaa; margin-bottom: 24px; }
-        a.back { color: #c77dff; }
-    </style>
+    <title>Лаб. 3 — Работа с анимацией</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="lab-nav">
         <a href="../lab1/index.html">Лаба 1</a>
         <a href="../lab2/index.html">Лаба 2</a>
         <a href="index.html" class="active">Лаба 3</a>
+        <a href="../lab4/index.html">Лаба 4</a>
         <a href="../index.html">Все лабы</a>
     </nav>
-    <div class="wrap">
-        <h1>Лабораторная работа 3</h1>
-        <p>Работа с анимацией</p>
-        <p>Статус: <strong>скоро</strong> — работа ещё не выполнена.</p>
-        <p><a class="back" href="../index.html">← Все лабораторные</a></p>
-    </div>
+
+    <header class="page-header">
+        <h1>Лабораторная работа № 3</h1>
+        <p>Работа с анимацией · CSS transitions и @keyframes</p>
+    </header>
+
+    <main class="main">
+        <section class="block">
+            <h2>1. CSS Transition (при наведении)</h2>
+            <p class="caption">Свойство <code>transition</code> плавно меняет фон и масштаб кнопки при hover.</p>
+            <div class="demo-row">
+                <button class="btn-transition" type="button">Наведите курсор</button>
+                <div class="box-transition">Карточка с transition</div>
+            </div>
+            <p class="note">transition: background-color 0.4s ease, transform 0.4s ease;</p>
+        </section>
+
+        <section class="block">
+            <h2>2. @keyframes: круг → прямоугольник → квадрат</h2>
+            <p class="caption">Розовый круг превращается в синий квадрат через промежуточный фиолетовый прямоугольник (идея из учебника).</p>
+            <div class="stage">
+                <div class="shape circle-to-square"></div>
+            </div>
+            <p class="note">animation-name: circle-to-square; animation-duration: 5s; animation-iteration-count: infinite;</p>
+        </section>
+
+        <section class="block">
+            <h2>3. Свойства анимации — демо-карточки</h2>
+            <div class="cards">
+                <article class="card">
+                    <div class="anim-box anim-name"></div>
+                    <h3>animation-name</h3>
+                    <p>Имя анимации, связанное с блоком <code>@keyframes</code>. Здесь: <code>pulse</code>.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-duration"></div>
+                    <h3>animation-duration</h3>
+                    <p>Длительность одного цикла. Слева 1s, справа (этот блок) 3s — медленнее.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-iteration"></div>
+                    <h3>animation-iteration-count</h3>
+                    <p>Число повторов. Значение <code>infinite</code> — бесконечно.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-direction"></div>
+                    <h3>animation-direction</h3>
+                    <p><code>alternate</code> — туда и обратно; <code>reverse</code> — в обратном порядке.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-timing"></div>
+                    <h3>animation-timing-function</h3>
+                    <p>Кривая скорости: <code>ease</code>, <code>linear</code>, <code>ease-in-out</code>, <code>steps()</code>.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-delay"></div>
+                    <h3>animation-delay</h3>
+                    <p>Задержка перед стартом. Здесь <code>1.5s</code> — анимация начинается позже.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-fill"></div>
+                    <h3>animation-fill-mode</h3>
+                    <p><code>forwards</code> сохраняет стили последнего кадра после окончания анимации.</p>
+                </article>
+                <article class="card">
+                    <div class="anim-box anim-shorthand"></div>
+                    <h3>animation (сокращение)</h3>
+                    <p>Краткая запись: name duration timing delay iteration direction fill-mode.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="block faq">
+            <h2>Кратко для контрольных вопросов</h2>
+            <ul>
+                <li><strong>animation-name</strong> — имя @keyframes, применяемое к элементу.</li>
+                <li><strong>animation-duration</strong> — длительность одного цикла (s / ms).</li>
+                <li><strong>animation-iteration-count</strong> — сколько раз проиграть (число или infinite).</li>
+                <li><strong>animation-direction</strong> — направление: normal, reverse, alternate, alternate-reverse.</li>
+                <li><strong>animation-timing-function</strong> — скорость изменения во времени.</li>
+                <li><strong>animation-delay</strong> — пауза перед первым запуском.</li>
+                <li><strong>animation-fill-mode</strong> — стили до/после анимации (none, forwards, backwards, both).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>© 2026 · Артём Скопенков · ИС2-241-ОБ · Web-дизайн</p>
+    </footer>
 </body>
 </html>
