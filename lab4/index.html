@@ -3,71 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пиксель — студия веб-дизайна</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Студия разработки сайтов Пиксель</title>
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+JP:wght@500;700&family=Oswald:wght@400;600;700&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="lab-nav">
-        <a href="../lab1/index.html">Лаба 1</a>
-        <a href="../lab2/index.html">Лаба 2</a>
-        <a href="../lab3/index.html">Лаба 3</a>
-        <a href="index.html" class="active">Лаба 4</a>
-        <a href="../index.html">Все лабы</a>
-    </nav>
-
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="brand">Пиксель</a>
-            <nav class="site-nav">
-                <a href="index.html" class="current">Главная</a>
-                <a href="uslugi.html">Услуги</a>
-                <a href="kontakty.html">Контакты</a>
+    <!-- Шапка сайта  -->
+     <header>
+        <div class="container">
+            <h1 class="logo">Пиксель</h1>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="#">Главная</a></li>
+                    <li class="menu-item"><a href="#services">Услуги</a></li>
+                    <li class="menu-item"><a href="#us">О нас</a></li>
+                    <li class="menu-item"><a href="#contacts">Контакты</a></li>
+                </ul>
             </nav>
         </div>
-    </header>
+     </header>
 
-    <main>
-        <section class="hero">
-            <div class="wrap">
-                <h1>Создаём сайты, которые запоминаются</h1>
-                <p>Студия веб-дизайна «Пиксель» — вёрстка, дизайн и анимация для бизнеса и личных проектов.</p>
-                <a href="uslugi.html" class="btn">Смотреть услуги</a>
+     <div class="theme-veil" aria-hidden="true"></div>
+     <div class="theme-world" aria-hidden="true">
+        <img class="cast-ghost ghost-anime" src="src/img/cut/anime-ghost.png" alt="">
+        <img class="cast-ghost ghost-folio" src="src/img/cut/folio-ghost.png" alt="">
+        <img class="cast-hero hero-anime" src="src/img/cut/anime-hero.png" alt="">
+        <img class="cast-hero hero-fashion" src="src/img/cut/fashion-hero.png" alt="">
+        <div class="deco deco-anime">
+            <i class="plus p1"></i><i class="plus p2"></i><i class="plus p3"></i><i class="plus p4"></i>
+            <b class="arrow a1"></b><b class="arrow a2"></b>
+            <span class="giant">PIXEL</span>
+            <span class="stamp">ピクセル</span>
+            <span class="barcode"></span>
+        </div>
+        <div class="deco deco-fashion">
+            <span class="vert">PIXEL</span>
+            <span class="wash">STUDIO</span>
+        </div>
+        <div class="deco deco-folio">
+            <span class="orb"></span>
+            <span class="giant">PIXEL</span>
+        </div>
+     </div>
+     <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+     <div class="site-cursor" aria-hidden="true"><span></span></div>
+     <div class="style-boom" aria-hidden="true"></div>
+
+     <section class="about" id="about">
+        <div class="container">
+            <p class="about-kicker">О сайте</p>
+            <div class="about-top">
+                <h2 class="about-title">Пиксель — студия, где сайт оживает</h2>
+                <p class="about-lead">Это не просто визитка. Здесь дизайн, код и движение собраны в одну картинку: стекло, свет и мелкие детали, которые отвечают на курсор.</p>
             </div>
-        </section>
 
-        <section class="wrap about">
-            <h2>О студии</h2>
-            <p>
-                Мы проектируем чистые интерфейсы на чистом HTML и CSS: без лишнего кода,
-                с акцентом на типографику, цвет и адаптив. Работаем по техническому заданию
-                и сдаём результат в срок.
-            </p>
-        </section>
+            <div class="about-stage">
+                <article class="about-hero">
+                    <div class="live-site" aria-hidden="true">
+                        <div class="live-glow"></div>
+                        <div class="live-chrome">
+                            <span class="live-dot red"></span>
+                            <span class="live-dot yellow"></span>
+                            <span class="live-dot green"></span>
+                            <div class="live-url">pixel.studio</div>
+                        </div>
+                        <div class="live-page">
+                            <div class="live-nav">
+                                <strong>Пиксель</strong>
+                                <div class="live-links">
+                                    <i></i><i></i><i></i>
+                                </div>
+                            </div>
+                            <p class="live-status"><span></span> сайт онлайн</p>
+                            <h3 class="live-title">Страница, которая <em>дышит</em></h3>
+                            <p class="live-line">Кнопки светятся, блоки встают, курсор оживляет макет.</p>
+                            <div class="live-cta">Открыть проект</div>
+                            <div class="live-row">
+                                <div class="live-card">
+                                    <b></b>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="live-card">
+                                    <b></b>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="live-card">
+                                    <b></b>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="live-cursor"></div>
+                        </div>
+                    </div>
+                    <div class="about-hero-copy">
+                        <span>Живой макет</span>
+                        <strong>Наведи — сайт просыпается</strong>
+                    </div>
+                </article>
 
-        <section class="wrap">
-            <h2>Три преимущества</h2>
-            <div class="features">
-                <article class="feature-card">
-                    <div class="icon">01</div>
-                    <h3>Чистая вёрстка</h3>
-                    <p>Семантический HTML5 и аккуратный CSS без JavaScript там, где он не нужен.</p>
+                <div class="about-cards">
+                    <article class="about-card">
+                        <span class="about-card-icon">01</span>
+                        <h3>Характер</h3>
+                        <p>Тёмный фон, яркий акцент и свой знак. Сайт сразу говорит, кто мы.</p>
+                    </article>
+                    <article class="about-card">
+                        <span class="about-card-icon">02</span>
+                        <h3>Движение</h3>
+                        <p>Карточки поднимаются, свет скользит, частицы тихо плывут за текстом.</p>
+                    </article>
+                    <article class="about-card">
+                        <span class="about-card-icon">03</span>
+                        <h3>Точность</h3>
+                        <p>Ничего лишнего: чистая вёрстка, воздух и аккуратная типографика.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <section class="services" id="services">
+        <div class="container">
+            <p class="about-kicker">Виды сайтов</p>
+            <div class="about-top">
+                <h2 class="about-title">Сначала форма — потом характер</h2>
+                <p class="about-lead">Лендинг, магазин, портфолио или медиа. Это каркас. Снизу можно выбрать, в каком мире он будет жить.</p>
+            </div>
+
+            <div class="kinds">
+                <article class="kind">
+                    <span>01</span>
+                    <h3>Лендинг</h3>
+                    <p>Одна страница. Ударный первый экран и путь к заявке.</p>
+                    <div class="kind-art landing" aria-hidden="true"><i></i><i></i><i></i></div>
                 </article>
-                <article class="feature-card">
-                    <div class="icon">02</div>
-                    <h3>Фирменный стиль</h3>
-                    <p>Фиолетовый акцент #7b2cbf, тёмная тема и единая система компонентов.</p>
+                <article class="kind">
+                    <span>02</span>
+                    <h3>Магазин</h3>
+                    <p>Каталог, карточка товара, корзина без лишнего шума.</p>
+                    <div class="kind-art shop" aria-hidden="true"><b></b><b></b></div>
                 </article>
-                <article class="feature-card">
-                    <div class="icon">03</div>
-                    <h3>Адаптив</h3>
-                    <p>Сайт удобно смотрится на телефоне, планшете и большом мониторе.</p>
+                <article class="kind">
+                    <span>03</span>
+                    <h3>Портфолио</h3>
+                    <p>Кейсы как галерея: крупно, красиво, с характером.</p>
+                    <div class="kind-art folio" aria-hidden="true"><em></em><em></em></div>
+                </article>
+                <article class="kind">
+                    <span>04</span>
+                    <h3>Медиа</h3>
+                    <p>Блог, релизы, видео. Ритм ленты и живые обложки.</p>
+                    <div class="kind-art media" aria-hidden="true"><s></s></div>
                 </article>
             </div>
-        </section>
-    </main>
 
-    <footer class="site-footer">
-        <p>© 2026 Пиксель · Артём Скопенков</p>
-    </footer>
+            <div class="designs" id="designs">
+                <p class="about-kicker">Дизайны</p>
+                <div class="about-top">
+                    <h2 class="about-title">Наведи — стиль просыпается</h2>
+                    <p class="about-lead">Нажми карточку — стиль вспыхнет, а внутри появится наш сайт «Пиксель».</p>
+                </div>
+
+                <div class="style-stage">
+                    <article class="style-card is-dossier" data-theme="anime">
+                        <div class="style-flip">
+                            <div class="style-window style-face">
+                                <img class="dossier-photo" src="src/img/dossier.jpg" alt="Аниме-карточка персонажа">
+                                <div class="style-glow"></div>
+                                <div class="dossier-scan"></div>
+                                <div class="dossier-eye"></div>
+                                <div class="dossier-dust" aria-hidden="true">
+                                    <i></i><i></i><i></i><i></i><i></i><i></i>
+                                </div>
+                                <span class="dossier-plus p1"></span>
+                                <span class="dossier-plus p2"></span>
+                                <span class="dossier-plus p3"></span>
+                                <div class="style-cursor"></div>
+                            </div>
+                            <div class="site-face">
+                                <div class="mini-site">
+                                    <div class="mini-top">
+                                        <strong>Пиксель</strong>
+                                        <div class="mini-nav"><span>Главная</span><span>Услуги</span><span>О нас</span></div>
+                                    </div>
+                                    <p class="mini-kicker">О сайте</p>
+                                    <h3>Пиксель — студия, где сайт оживает</h3>
+                                    <p class="mini-lead">Дизайн, код и движение в одной картинке.</p>
+                                    <div class="mini-grid"><i></i><i></i><i></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-caption">
+                            <span class="cap-idle">Стиль</span>
+                            <span class="cap-live">Сейчас здесь</span>
+                            <strong class="cap-idle">Аниме / character card</strong>
+                            <strong class="cap-live">Сайт Пиксель</strong>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="style-row">
+                    <article class="style-card is-fashion" data-theme="fashion">
+                        <div class="style-flip">
+                            <div class="style-window style-face">
+                                <img class="look-photo" src="src/img/fashion.jpg" alt="Fashion lookbook">
+                                <div class="style-glow"></div>
+                                <div class="dossier-scan"></div>
+                                <div class="style-cursor"></div>
+                            </div>
+                            <div class="site-face">
+                                <div class="mini-site">
+                                    <div class="mini-top">
+                                        <strong>Пиксель</strong>
+                                        <div class="mini-nav"><span>Главная</span><span>Услуги</span><span>О нас</span></div>
+                                    </div>
+                                    <p class="mini-kicker">О сайте</p>
+                                    <h3>Пиксель — студия, где сайт оживает</h3>
+                                    <p class="mini-lead">Дизайн, код и движение в одной картинке.</p>
+                                    <div class="mini-grid"><i></i><i></i><i></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-caption">
+                            <span class="cap-idle">Стиль</span>
+                            <span class="cap-live">Сейчас здесь</span>
+                            <strong class="cap-idle">Fashion / lookbook</strong>
+                            <strong class="cap-live">Сайт Пиксель</strong>
+                        </div>
+                    </article>
+
+                    <article class="style-card is-folio" data-theme="folio">
+                        <div class="style-flip">
+                            <div class="style-window style-face">
+                                <img class="look-photo" src="src/img/folio.jpg" alt="Creative portfolio">
+                                <div class="style-glow"></div>
+                                <div class="dossier-scan"></div>
+                                <div class="style-cursor"></div>
+                            </div>
+                            <div class="site-face">
+                                <div class="mini-site">
+                                    <div class="mini-top">
+                                        <strong>Пиксель</strong>
+                                        <div class="mini-nav"><span>Главная</span><span>Услуги</span><span>О нас</span></div>
+                                    </div>
+                                    <p class="mini-kicker">О сайте</p>
+                                    <h3>Пиксель — студия, где сайт оживает</h3>
+                                    <p class="mini-lead">Дизайн, код и движение в одной картинке.</p>
+                                    <div class="mini-grid"><i></i><i></i><i></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-caption">
+                            <span class="cap-idle">Стиль</span>
+                            <span class="cap-live">Сейчас здесь</span>
+                            <strong class="cap-idle">Портфолио / creative</strong>
+                            <strong class="cap-live">Сайт Пиксель</strong>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <section class="crew" id="us">
+        <div class="container">
+            <p class="about-kicker">О нас</p>
+            <div class="about-top">
+                <h2 class="about-title">Маленькая студия с большим характером</h2>
+                <p class="about-lead">Мы не конвейер. Пиксель — это дизайн, код и движение в одной комнате. Наведите на роли — студия просыпается.</p>
+            </div>
+
+            <div class="crew-board">
+                <article class="crew-manifest">
+                    <div class="crew-pulse" aria-hidden="true"><i></i><i></i><i></i></div>
+                    <p class="crew-online"><span></span> студия онлайн</p>
+                    <h3>Собираем сайты, которые отвечают</h3>
+                    <p>Без шаблонной сетки. Сначала характер, потом блоки. Каждый проект получает свой свет, свой ритм и свой курсор.</p>
+                    <div class="crew-stats">
+                        <div class="stat">
+                            <strong>03</strong>
+                            <span>живых стиля</span>
+                        </div>
+                        <div class="stat">
+                            <strong>12</strong>
+                            <span>собранных сцен</span>
+                        </div>
+                        <div class="stat">
+                            <strong>24ч</strong>
+                            <span>на первый ответ</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="crew-roles">
+                    <article class="crew-card is-design">
+                        <div class="crew-face" aria-hidden="true">
+                            <b></b>
+                            <span class="eye"></span>
+                            <span class="eye"></span>
+                        </div>
+                        <span>01</span>
+                        <h3>Дизайн</h3>
+                        <p>Цвет, тип и кадр. Делаем так, чтобы сайт сразу сказал, кто вы.</p>
+                    </article>
+                    <article class="crew-card is-code">
+                        <div class="crew-face" aria-hidden="true">
+                            <span class="code-glyph">&lt;/&gt;</span>
+                        </div>
+                        <span>02</span>
+                        <h3>Код</h3>
+                        <p>Чистая вёрстка, воздух и анимации, которые не тормозят.</p>
+                    </article>
+                    <article class="crew-card is-motion">
+                        <div class="crew-face" aria-hidden="true">
+                            <span class="jump-shadow"></span>
+                            <span class="jump-cursor"></span>
+                        </div>
+                        <span>03</span>
+                        <h3>Движение</h3>
+                        <p>Hover, свет и мелкие детали, из которых страница начинает дышать.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="crew-path">
+                <article class="path-step">
+                    <span>01</span>
+                    <h3>Слушаем</h3>
+                    <p>Референс, характер, для кого сайт. Без воды.</p>
+                </article>
+                <article class="path-step">
+                    <span>02</span>
+                    <h3>Собираем</h3>
+                    <p>Макет оживает: блоки, свет, курсор, стиль.</p>
+                </article>
+                <article class="path-step">
+                    <span>03</span>
+                    <h3>Запускаем</h3>
+                    <p>Отдаём страницу, которая уже умеет отвечать.</p>
+                </article>
+            </div>
+        </div>
+     </section>
+
+     <section class="contact" id="contacts">
+        <div class="container">
+            <p class="about-kicker">Контакты</p>
+            <div class="about-top">
+                <h2 class="about-title">Напишите — мы уже на линии</h2>
+                <p class="about-lead">Короткое сообщение важнее длинного брифа. Оставьте след — студия моргнёт в ответ.</p>
+            </div>
+
+            <div class="contact-stage">
+                <article class="contact-chat">
+                    <div class="chat-top">
+                        <strong>Пиксель</strong>
+                        <span class="chat-live"><i></i> онлайн</span>
+                    </div>
+                    <div class="chat-log">
+                        <p class="bubble them">Привет. Какой сайт собираем?</p>
+                        <p class="bubble you">Лендинг в аниме-стиле, с живым курсором.</p>
+                        <p class="bubble them typing">печатает<span>.</span><span>.</span><span>.</span></p>
+                        <p class="bubble them reply">Приняли. Напишите контакт — вернёмся с первым кадром.</p>
+                    </div>
+                    <form class="contact-form">
+                        <label>
+                            Имя
+                            <input type="text" name="name" placeholder="Как к вам обращаться" required>
+                        </label>
+                        <label>
+                            Связь
+                            <input type="text" name="link" placeholder="Telegram или почта" required>
+                        </label>
+                        <label class="wide">
+                            Задача
+                            <textarea name="task" rows="3" placeholder="Что нужно оживить" required></textarea>
+                        </label>
+                        <button type="submit">Отправить сигнал</button>
+                    </form>
+                    <p class="chat-sent">Сигнал ушёл. Пиксель скоро ответит.</p>
+                </article>
+
+                <div class="contact-side">
+                    <a class="ping" href="mailto:hello@pixel.studio">
+                        <span>01</span>
+                        <strong>Почта</strong>
+                        <b>hello@pixel.studio</b>
+                    </a>
+                    <a class="ping" href="https://t.me/pixelstudio" target="_blank" rel="noreferrer">
+                        <span>02</span>
+                        <strong>Telegram</strong>
+                        <b>@pixelstudio</b>
+                    </a>
+                    <article class="ping is-time">
+                        <span>03</span>
+                        <strong>Ответ</strong>
+                        <b>обычно в течение дня</b>
+                    </article>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <script src="src/main.js"></script>
 </body>
 </html>

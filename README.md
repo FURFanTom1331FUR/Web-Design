@@ -60,5 +60,5 @@ GitHub Pages публикуется из ветки `main`, корень `/`.
 Отчёт: [`lab3/Otchet_Lab3_Web-Dizayn.docx`](lab3/Otchet_Lab3_Web-Dizayn.docx)
 
 ### Lab 4 — Создание сайта по техническому заданию
-Сайт студии «Пиксель»: главная, услуги, контакты + форма (HTML + CSS).  
+Лендинг студии «Пиксель»: живой курсор, частицы, темы аниме / fashion / folio, услуги, о нас и форма контактов (HTML + CSS + JS).  
 Отчёт: [`lab4/Otchet_Lab4_Web-Dizayn.docx`](lab4/Otchet_Lab4_Web-Dizayn.docx)
